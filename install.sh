@@ -23,7 +23,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 command -v nvm;
 
-nvm install 14.0.0;
+nvm install 14.17.3 && nvm use 14.17.3;
 
 #INSTALA O YARN
 
