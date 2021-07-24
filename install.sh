@@ -4,7 +4,7 @@
 sudo apt install gnome-tweaks && echo "AJUSTES INSTALADO";
 
 #INSTALA O ZSH
-sudo apt install zsh && echo "ZSH INSTALADO";
+sudo apt install zsh && echo "ZSH INSTALADO" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && echo "Instalado o ZSH";
 
 #INSTALA O SNAPD
 sudo apt install snapd && echo "SNAP INSTALADO";
