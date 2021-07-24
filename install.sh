@@ -37,3 +37,9 @@ sudo apt install code && echo "Visual studio code instalado";
 
 #INSTALA O SPOTIFY
 flatpak install flathub com.spotify.Client && echo "Spotify instalado";
+
+#INSTALA OS ICONES PAPIROS
+sudo add-apt-repository ppa:noobslab/icons && sudo apt-get install papirus-icons && echo "Papirus instalado";
+
+#INSTALA O ZOOM
+flatpak install flathub us.zoom.Zoom && echo "Instalado o Zoom";
