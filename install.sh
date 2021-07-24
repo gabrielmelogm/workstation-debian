@@ -35,3 +35,5 @@ sudo snap install insomnia && echo "INSOMNIA INSTALADO";
 #INSTALA O VISUAL STUDIO CODE
 sudo apt install code && echo "Visual studio code instalado";
 
+#INSTALA O SPOTIFY
+sudo flatpak install flathub com.spotify.Client && echo "Spotify instalado";
