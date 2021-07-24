@@ -13,7 +13,7 @@ sudo apt install snapd && echo "SNAP INSTALADO";
 sudo apt install telegram-desktop && echo "TELEGRAM INSTALADO";
 
 #INSTALA O CHROME
-#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && cd Documentos/ && sudo dpkg -i google-chrome-stable_current_amd64.deb;
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && cd Documentos/ && sudo dpkg -i google-chrome-stable_current_amd64.deb;
 
 #INSTALA O NVM
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash;
