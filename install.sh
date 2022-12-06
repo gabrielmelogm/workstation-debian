@@ -20,6 +20,8 @@ echo "FiraCode instalado";
 sudo apt install wget && echo "WGET INSTALADO";
 
 #INSTALA o fish shell
+sudo apt install libtinfo5
+
 wget -c https://launchpadlibrarian.net/613913678/fish_3.5.1-1~xenial_amd64.deb
 sudo dpkg -i fish_3.5.1-1~xenial_amd64.deb && rm fish_3.5.1-1~xenial_amd64.deb && echo "FISH INSTALADO";
 
