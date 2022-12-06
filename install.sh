@@ -18,8 +18,6 @@ chsh -s /bin/fish
 # Configurar o fish com startship
 curl -sS https://starship.rs/install.sh | sh
 
-echo "starship init fish | source" >> ~/.config/fish/config.fish
-
 cp ./starship.toml ~/.config/starship.toml
 
 echo "Startship configurado";
@@ -31,9 +29,11 @@ fisher install jorgebucaran/nvm.fish
 
 nvm install lts && nvm use lts && echo "NVM INSTALADO";
 
-echo "nvm use lts" >> ~/.config/fish/config.fish;
-
 echo "NVM configurado";
+
+echo "starship init fish | source" \n "nvm use lts" >> ~/.config/fish/config.fish
+
+echo "Fish configurado"
 
 #INSTALA o visual studio code
 
