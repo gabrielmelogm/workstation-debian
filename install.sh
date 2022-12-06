@@ -3,6 +3,12 @@
 #INSTALA O GNOME TWEAKS
 sudo apt install gnome-tweaks && echo "AJUSTES INSTALADO";
 
+#INSTALA O CURL
+sudo apt install curl && echo "CURL INSTALADO";
+
+#INSTALA O NEOVIM
+sudo apt install neovim && echo "NEOVIM INSTALADO";
+
 #INSTALA as fontes ligatures
 mkdir ~/.fonts
 
