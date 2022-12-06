@@ -72,3 +72,9 @@ flatpak install flathub com.discordapp.Discord && echo "Discord instalado";
 
 # INSTALA o whatsapp
 flatpak install flathub io.github.mimbrero.WhatsAppDesktop && echo "Whatsapp instalado";
+
+# INSTALA o vlc
+flatpak install flathub org.videolan.VLC && echo "VlC instalado";
+
+# INSTALA o qbittorrent
+flatpak install flathub org.qbittorrent.qBittorrent && echo "Qbittorrent instalado";
