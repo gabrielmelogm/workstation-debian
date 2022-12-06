@@ -3,43 +3,26 @@
 #INSTALA O GNOME TWEAKS
 sudo apt install gnome-tweaks && echo "AJUSTES INSTALADO";
 
-#INSTALA O ZSH
-sudo apt install zsh && echo "ZSH INSTALADO" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && echo "Instalado o ZSH";
+#INSTALA o wget (caso não tenha)
+sudo apt install wget && echo "WGET INSTALADO";
 
-#INSTALA O SNAPD
-sudo apt install snapd && echo "SNAP INSTALADO";
+#INSTALA o fish shell
+wget -c https://launchpadlibrarian.net/613913678/fish_3.5.1-1~xenial_amd64.deb
+sudo dpkg -i fish_3.5.1-1~xenial_amd64.deb && rm fish_3.5.1-1~xenial_amd64.deb && echo "FISH INSTALADO";
 
-#INSTALA O TELEGRAM
-sudo apt install telegram-desktop && echo "TELEGRAM INSTALADO";
+# Definiciar o fish como shell padrão
+chsh -s /usr/bin/fish
 
-#INSTALA O CHROME
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && cd Documentos/ && sudo dpkg -i google-chrome-stable_current_amd64.deb;
 
-#INSTALA O NVM
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash;
+#INSTALA o nvm
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; # This loads nvm
+#INSTALA o visual studio code
 
-command -v nvm;
+#INSTALA o telegram
 
-nvm install 14.17.3 && nvm use 14.17.3;
+#INSTALA o insomnia
 
-#INSTALA O YARN
-
-npm install -g yarn && echo "YARN INSTALADO";
-
-#INSTALA O INSOMNIA
-sudo snap install insomnia && echo "INSOMNIA INSTALADO";
-
-#INSTALA O VISUAL STUDIO CODE
-sudo apt install code && echo "Visual studio code instalado";
-
-#INSTALA O SPOTIFY
+#INSTALA o spotify
 flatpak install flathub com.spotify.Client && echo "Spotify instalado";
 
-#INSTALA OS ICONES PAPIROS
-sudo add-apt-repository ppa:noobslab/icons && sudo apt-get install papirus-icons && echo "Papirus instalado";
-
-#INSTALA O ZOOM
-flatpak install flathub us.zoom.Zoom && echo "Instalado o Zoom";
+# INSTALA o slack
