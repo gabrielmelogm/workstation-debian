@@ -46,6 +46,9 @@ echo "Fish configurado"
 wget -c https://az764295.vo.msecnd.net/stable/6261075646f055b99068d3688932416f2346dd3b/code_1.73.1-1667967334_amd64.deb
 sudo dpkg -i code_1.73.1-1667967334_amd64.deb && rm code_1.73.1-1667967334_amd64.deb && echo "VS CODE INSTALADO";
 
+#INSTALA o flatpak
+sudo apt install flatpak && echo "FLATPAK INSTALADO";
+
 #INSTALA o telegram
 flatpak install flathub org.telegram.desktop && echo "Telegram instalado";
 
