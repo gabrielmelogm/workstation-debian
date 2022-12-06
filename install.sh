@@ -78,3 +78,13 @@ flatpak install flathub org.videolan.VLC && echo "VlC instalado";
 
 # INSTALA o qbittorrent
 flatpak install flathub org.qbittorrent.qBittorrent && echo "Qbittorrent instalado";
+
+# INSTALA o dracula theme
+wget -c https://codeload.github.com/dracula/gtk/zip/refs/heads/master
+unzip master && rm master 
+mv gtk-master/ ~/.themes/Dracula && rm -rf gtk-master/ && echo "Dracula theme instalado";
+
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+
+echo "Dracula setado"
