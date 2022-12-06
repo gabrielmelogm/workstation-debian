@@ -63,3 +63,6 @@ flatpak install flathub com.slack.Slack && echo "Slack instalado";
 
 # INSTALA o discord
 flatpak install flathub com.discordapp.Discord && echo "Discord instalado";
+
+# INSTALA o whatsapp
+flatpak install flathub io.github.mimbrero.WhatsAppDesktop && echo "Whatsapp instalado";
