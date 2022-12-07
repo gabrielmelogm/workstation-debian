@@ -3,43 +3,88 @@
 #INSTALA O GNOME TWEAKS
 sudo apt install gnome-tweaks && echo "AJUSTES INSTALADO";
 
-#INSTALA O ZSH
-sudo apt install zsh && echo "ZSH INSTALADO" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && echo "Instalado o ZSH";
+#INSTALA O CURL
+sudo apt install curl && echo "CURL INSTALADO";
 
-#INSTALA O SNAPD
-sudo apt install snapd && echo "SNAP INSTALADO";
+#INSTALA O NEOVIM
+sudo apt install neovim && echo "NEOVIM INSTALADO";
 
-#INSTALA O TELEGRAM
-sudo apt install telegram-desktop && echo "TELEGRAM INSTALADO";
+#INSTALA as fontes ligatures
+mkdir ~/.fonts
 
-#INSTALA O CHROME
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && cd Documentos/ && sudo dpkg -i google-chrome-stable_current_amd64.deb;
+cp ./FiraCode.zip ~/.fonts/FiraCode.zip && unzip ~/.fonts/FiraCode.zip && rm ~/.fonts/FiraCode.zip && echo "FONTE INSTALADA";
 
-#INSTALA O NVM
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash;
+cp ./JetBrainsMono-2.242.zip ~/.fonts/JetBrainsMono-2.242.zip && unzip ~/.fonts/JetBrainsMono-2.242.zip && rm ~/.fonts/JetBrainsMono-2.242.zip && echo "FONTE INSTALADA";
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; # This loads nvm
+#INSTALA o wget (caso não tenha)
+sudo apt install wget && echo "WGET INSTALADO";
 
-command -v nvm;
+#INSTALA o fish shell
+sudo apt install libtinfo5
 
-nvm install 14.17.3 && nvm use 14.17.3;
+wget -c https://launchpadlibrarian.net/613913678/fish_3.5.1-1~xenial_amd64.deb
+sudo dpkg -i fish_3.5.1-1~xenial_amd64.deb && rm fish_3.5.1-1~xenial_amd64.deb && echo "FISH INSTALADO";
 
-#INSTALA O YARN
+# Definiciar o fish como shell padrão
+chsh -s /usr/bin/fish
 
-npm install -g yarn && echo "YARN INSTALADO";
+# Configurar o fish com startship
+curl -sS https://starship.rs/install.sh | sh
 
-#INSTALA O INSOMNIA
-sudo snap install insomnia && echo "INSOMNIA INSTALADO";
+cp ./starship.toml ~/.config/starship.toml
 
-#INSTALA O VISUAL STUDIO CODE
-sudo apt install code && echo "Visual studio code instalado";
+echo "Startship configurado";
 
-#INSTALA O SPOTIFY
+#INSTALA o nvm
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+fisher install jorgebucaran/nvm.fish
+
+nvm install lts && nvm use lts && echo "NVM INSTALADO";
+
+echo "NVM configurado";
+
+echo "starship init fish | source" \n "nvm use lts" >> ~/.config/fish/config.fish
+
+echo "Fish configurado"
+
+#INSTALA o visual studio code
+wget -c https://az764295.vo.msecnd.net/stable/6261075646f055b99068d3688932416f2346dd3b/code_1.73.1-1667967334_amd64.deb
+sudo dpkg -i code_1.73.1-1667967334_amd64.deb && rm code_1.73.1-1667967334_amd64.deb && echo "VS CODE INSTALADO";
+
+#INSTALA o flatpak
+sudo apt install flatpak && echo "FLATPAK INSTALADO";
+
+#INSTALA o telegram
+flatpak install flathub org.telegram.desktop && echo "Telegram instalado";
+
+#INSTALA o insomnia
+flatpak install flathub rest.insomnia.Insomnia && echo "Insomnia instalado";
+
+#INSTALA o spotify
 flatpak install flathub com.spotify.Client && echo "Spotify instalado";
 
-#INSTALA OS ICONES PAPIROS
-sudo add-apt-repository ppa:noobslab/icons && sudo apt-get install papirus-icons && echo "Papirus instalado";
+# INSTALA o slack
+flatpak install flathub com.slack.Slack && echo "Slack instalado";
 
-#INSTALA O ZOOM
-flatpak install flathub us.zoom.Zoom && echo "Instalado o Zoom";
+# INSTALA o discord
+flatpak install flathub com.discordapp.Discord && echo "Discord instalado";
+
+# INSTALA o whatsapp
+flatpak install flathub io.github.mimbrero.WhatsAppDesktop && echo "Whatsapp instalado";
+
+# INSTALA o vlc
+flatpak install flathub org.videolan.VLC && echo "VlC instalado";
+
+# INSTALA o qbittorrent
+flatpak install flathub org.qbittorrent.qBittorrent && echo "Qbittorrent instalado";
+
+# INSTALA o dracula theme
+wget -c https://codeload.github.com/dracula/gtk/zip/refs/heads/master
+unzip master && rm master 
+mv gtk-master/ ~/.themes/Dracula && rm -rf gtk-master/ && echo "Dracula theme instalado";
+
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+
+echo "Dracula setado"
